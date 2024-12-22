@@ -85,3 +85,7 @@ gem "image_processing", ">= 1.2"
 gem "mini_magick"
 
 gem "webpacker"
+gem 'bootstrap', '~> 5.2.2'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'rails_sortable'

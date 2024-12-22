@@ -16,7 +16,7 @@ class MyValidator < ActiveModel::Validator
  end
 
  class EmailValidator <ActiveModel::EachValidator
- 	def validate_each(record , attribute , value )
+ 	def validate_each(record , attribute , value )    
  		unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
  			record.errors.add attribute, (options[:message] || "is not an Email")
  		end
@@ -30,7 +30,7 @@ class Person < ApplicationRecord
 	#validates :start_date, comparison: { less_than_or_equal_to: :end_date }
 	#validates :subdomain, exclusion: { in: %w(www us ca jp),message: "%{value} is reserved." }
 	#validates :subdomain, format: { with: /\A[a-zA-Z]+\z/,
-    #message: "only allows letters" }
+    #message: "only allows letters" } 
     #validates :subdomain, inclusion: { in: %w(Nikhil),
     #message: "%{value} is not a valid size" }
     #validates :name, length: { minimum: 2 }
